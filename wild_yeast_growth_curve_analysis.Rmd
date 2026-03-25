@@ -1,0 +1,251 @@
+---
+title: "wild_yeast_growth_curve_example"
+output: html_document
+date: "2025-07-15"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+if (!requireNamespace("gcplyr", quietly = TRUE)) {
+    install.packages("gcplyr")
+}
+if (!requireNamespace("reshape2", quietly = TRUE)) {
+    install.packages("reshape2")
+}
+if (!requireNamespace("ggplot2", quietly = TRUE)) {
+    install.packages("ggplot2")
+}
+if (!requireNamespace("dplyr", quietly = TRUE)) {
+    install.packages("dplyr")
+}
+library(gcplyr)
+library(reshape2)
+library(ggplot2)
+library(dplyr)
+```
+
+## Growth curve analysis
+
+We will be using gcplyr to analyze our growth curves
+You can read more about this package here: https://github.com/mikeblazanin/gcplyr?tab=readme-ov-file
+
+
+## Importing the data
+
+In this section we will import the data. The growth curve data file must be in the same folder/directory on your computer as this R-file. 
+
+```{r data import}
+#read in wide-formatted data
+all_data<-read_wides(files="combined_curve.tsv")
+
+#transform the wide-data to tidy formatted ata
+all_data.tidy<-melt(data = all_data, id.vars = c("file","Time"), value.name = "Measurements", variable.name = "Well")
+
+#read in the file with the metadata
+metadata<-read.table(file="strain_sample.txt", header=T)
+
+#convert the data from wide to long format
+all_data.tidy<-full_join(all_data.tidy, metadata, relationship = "many-to-many")
+
+#clean up the data and remove the "mistake" well
+all_data.tidy$Time<-as.numeric(all_data.tidy$Time)
+all_data.tidy$Measurements<-as.numeric(all_data.tidy$Measurements)
+all_data.tidy<-subset(all_data.tidy, Well_Type != "mistake")
+
+
+```
+
+## Pre-processing: subtracting blanks
+
+"Many growth curves are collected by measuring the absorbance or optical density of a culture. However,
+with such data an absorbance value of 0 is not equal to a cell density of 0, since components of the media
+often absorb some light. It’s best practice to have at least one ‘blank’ well in your plate containing only
+media and no cells, so that you can subtract out this difference from your data so that the values you are
+working with are scaled correctly.
+
+Here we have some data including a blank well. The first thing you should always do is plot your blank wells
+data to ensure they look correct:"
+
+
+```{r blanks}
+
+#plot the raw data so we can see if the blanks are what we think
+ggplot(data = all_data.tidy, aes(x = Time, y = Measurements, color = Well_Type)) + geom_point()
+
+#subtract the "Blank" wells
+mean_blank <- mean(dplyr::filter(all_data.tidy, Well_Type == "BLANK")$Measurements)
+mean_blank
+all_data.tidy$Measurements <- all_data.tidy$Measurements - mean_blank
+
+```
+
+
+## Pre-processing additional steps
+
+```{r pre process 2}
+
+
+#Convert time to hours
+all_data.tidy$Time <- all_data.tidy$Time/3600 
+
+#Add in some useful metrics/calculations that we will need for the metrics below
+all_data.tidy <-
+mutate(group_by(all_data.tidy, Well, Sample),
+deriv = calc_deriv(x = Time, y = Measurements),
+deriv_percap5 = calc_deriv(x = Time, y = Measurements,
+percapita = TRUE, blank = 0,
+window_width_n = 5, trans_y = "log"),
+doub_time = doubling_time(y = deriv_percap5))
+
+
+```
+
+## Plot all the data for all wells
+
+```{r plot}
+
+#Plot all the data!
+ggplot(data = all_data.tidy, aes(x = Time, y = Measurements)) +
+geom_line() +
+facet_wrap(~Well, nrow = 8, ncol = 12)
+
+```
+
+
+# Analyze your samples! 
+
+We are going to calculate the following metrics for your samples
+
+Most common metrics
+• the lag time
+• the maximum cellular growth rate (i.e. minimum doubling time)
+• the maximum density (e.g. carrying capacity)
+• the area under the curve
+
+## Step 1 
+
+Subset the data to include only your two samples 
+I will conduct the tutorial using samples for PAG
+
+```{r subsetting the data}
+
+#Subset the data so it only contains YOUR samples
+samples<-subset(all_data.tidy, Sample == "PAG-052825-01-A" | Sample == "PAG-052825-02-A" )
+
+#Look at your data
+ggplot(data = samples, aes(x= Time, y=Measurements, color=Sample))+facet_wrap(~Sample)+geom_point()
+
+```
+"Bacteria often have a period of time before they reach their maximum growth rate. If you would like to
+quantify this lag time, you can use the lag_time function. lag_time needs the x and y values, as well
+as the (per-capita) derivative and the blank value (the value of your Measurements that corresponds to a
+population density of 0; if your data have already been normalized, simply add blank = 0). It will find the
+maximum derivative, then project the tangent line with that slope back until it crosses the starting density."
+
+```{r Lag Time}
+
+#Calculate the lag time
+samples.lagtime <-
+summarize(group_by(samples, Well, Sample),
+lag_time = lag_time(y = Measurements, x = Time,
+deriv = deriv_percap5, blank = 0))
+
+#This is the lag time for your samples
+samples.lagtime
+
+#Plot your growth curves with the lag time
+ggplot(data = samples,
+aes(x = Time, y = log(Measurements))) +
+geom_point() + facet_wrap(~Well) + geom_vline(data = samples.lagtime, aes(xintercept = lag_time), lty = 2) 
+
+```
+
+# Maximum growth rate and minimum doubling time
+
+"If you want to calculate the bacterial maximum growth rate (i.e. the minimum doubling time), it will often be
+sufficient to use max_gc on the per-capita derivatives we calculated in vignette("gc05_process"). (max_gc
+works just like R’s built-in max, but with better default settings for growth curve analyses with summarize)."
+
+
+```{r max growth rate }
+
+#Calculate the maximum growth rate and doubling time
+samples.maxgrowth <-
+summarize(group_by(samples, Well, Sample),
+max_percap = max_gc(deriv_percap5, na.rm = TRUE),
+max_percap_time = extr_val(Time, which_max_gc(deriv_percap5)),
+doub_time = doubling_time(y = max_percap),max_percap_dens = Measurements[which_max_gc(deriv_percap5)])
+
+#These are the results
+samples.maxgrowth
+
+#Plot your data with the growth rates
+ggplot(data = samples,
+aes(x = Time, y = log(Measurements))) +
+geom_point() + facet_wrap(~Well) + geom_vline(data = samples.lagtime, aes(xintercept = lag_time), lty = 2)+
+geom_abline(data = samples.maxgrowth, color = "red", aes(slope = max_percap, intercept = log(max_percap_dens) - max_percap*max_percap_time)) 
+
+```
+
+
+
+# Maximum density
+
+
+"The maximum bacterial density can be a measure of bacterial growth yield/efficiency. If your bacteria
+plateau in density, the maximum density can also be a measure of bacterial carrying capacity. If you want
+to quantify the maximum bacterial density, we can use max_gc to get the global maxima of Measurements
+(max_gc, which_max_gc, and extr_val work just like R’s built-in max, which.max, and [, but with better
+default settings for growth curve analyses with summarize).
+See Peak bacterial density for identifying local maxima of Measurements (e.g. if you wanted the first peak
+in Well E11 shown below)."
+
+```{r max density}
+
+#Calculate the maximum density of your sample
+samples.maxdens <-
+summarize(group_by(samples, Well, Sample),
+max_dens = max_gc(Measurements, na.rm = TRUE),
+max_time = extr_val(Time, which_max_gc(Measurements)))
+
+#Maximum density
+samples.maxdens
+
+#Plot the growth data with the maximum density
+ggplot(data = samples, aes(x = Time, y = Measurements)) +
+geom_point() + facet_wrap(~Well) + 
+  geom_point(data = samples.maxdens, aes(x = max_time, y = max_dens), size = 2, color = "red")
+
+```
+
+
+# Area under the curve
+
+"The area under the curve is a common metric of total bacterial growth, for instance in the presence of
+antagonists like antibiotics or phages. If you want to calculate the area under the curve, you can use the
+gcplyr function auc. Simply specify Time as the x and Measurements as the y data whose area-under-thecurve you want to calculate."
+
+
+```{r auc}
+
+#Calculate the area under the curve
+samples.auc <-
+summarize(group_by(samples, Sample, Well),
+auc = auc(x = Time, y = Measurements))
+
+#Report area under the curve
+samples.auc
+
+```
+
+BONUS - make a pretty plot
+
+Take this plot and make it look pretty
+
+```{r pretty plot}
+
+ggplot(data = samples,
+aes(x = Time, y = log(Measurements))) +
+geom_point() + facet_wrap(~Well) + geom_vline(data = samples.lagtime, aes(xintercept = lag_time), lty = 2)+
+geom_abline(data = samples.maxgrowth, color = "red", aes(slope = max_percap, intercept = log(max_percap_dens) - max_percap*max_percap_time)) 
+```

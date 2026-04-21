@@ -80,7 +80,7 @@ See this link to review basic lab techniques: https://github.com/The-Lab-LaBella
 The LaBella lab will conduct wet lab work at the NCRC on Wednesdays. 
 
 * May 20th - Biosafety Introduction for NCRC trainees
-* May 27th - _Codon Conference_ - [HPC Practice & Setup](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Intro_to_Cluster.md)
+* May 27th - _Codon Conference_ - [HPC Practice & Setup](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Intro_to_Cluster.md)/TBD
 * June 3rd - [Sample Collection and Processing (Main Campus)](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Sampling_Day.md)
 * June 10th - [Sample Passaging](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Sample_Passaging.md)
 * June 17th - [Dilute & Plate ](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/dilute_and_plate.md)

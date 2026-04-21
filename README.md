@@ -68,7 +68,7 @@ You must review and then sign a physical copy of our laboratory EHS manual. A co
 
 ## Review Basic Lab techniques
 
-See this link to review basic lab techniques: https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2025/blob/main/lab_basics.md
+See this link to review basic lab techniques: https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/lab_basics.md
 
 &nbsp;
 &nbsp;
@@ -82,7 +82,7 @@ The LaBella lab will conduct wet lab work at the NCRC on Wednesdays.
 * June 3rd - [Sample Collection and Processing (Main Campus)](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Sampling_Day.md)
 * June 10th - [Sample Passaging](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Sample_Passaging.md)
 * June 17th - [Dilute & Plate ](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/dilute_and_plate.md)
-* June 24th - _Dr. Ward at Cellular and Molecular Fungal Biology Gordon Research Conference - Dr. LaBella leading in Kannapolis_ [Streak out](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/morphotype_streaking.md)
+* June 24th - _Dr. Ward at Cellular and Molecular Fungal Biology Gordon Research Conference - Dr. LaBella leading in Kannapolis_ - [Streak out](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/morphotype_streaking.md)
 * July 1st - [Growth Experiment](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/growth_experiment.md)
 * July 8th - [DNA Extraction](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/DNA_extraction.md)
 * July 15th - [Genome Assembly](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Genome_Assembly.md) & Computational Time

@@ -10,7 +10,9 @@
 
 # Introduction
 
-This summer, you will paricipate in the first wild yeast collection at UNC Charlotte. 
+This summer, you will participate in the second wild yeast collection at UNC Charlotte. This project, "_Genomic diversity of yeast in urban environments_", is focused on understanding the frequency and genomic features of species that appear adjacent to our community.
+
+Humans and fungi have been closely linked since ancient times: we have used them in food, as medicine, and in numerous industrial processes. In addition to being a long-term friend of humanity, fungi have also been a foe, with over 6.55 million people worldwide suffering from life-threatening fungal infection (mycosis) annually. Understanding the frequency certain species appear in the environment and the different genomic traits exhibited in these populations is critical for improvements in both biotechnology and in prevention and treatment of mycoses. In this project, students will be collecting samples from local field sites and using molecular and computational techniques to isolate and identify prevalent yeasts within our community. 
 
 You **must read this thoroughly**! It contains important safety information. 
 

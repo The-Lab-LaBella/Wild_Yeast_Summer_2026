@@ -80,14 +80,14 @@ See this link to review basic lab techniques: https://github.com/The-Lab-LaBella
 The LaBella lab will conduct wet lab work at the NCRC on Wednesdays. 
 
 * May 20th - Biosafety Introduction for NCRC trainees
-* May 27th - _Codon Conference_ - [HPC Practice & Setup](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Intro_to_Cluster.md)/TBD
-* June 3rd - [Sample Collection and Processing (Main Campus)](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Sampling_Day.md)
-* June 10th - [Sample Passaging](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Sample_Passaging.md)
-* June 17th - [Dilute & Plate ](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/dilute_and_plate.md)
-* June 24th - _Dr. Ward at Cellular and Molecular Fungal Biology Gordon Research Conference - Dr. LaBella leading in Kannapolis_ - [Streak out](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/morphotype_streaking.md)
-* July 1st - [Growth Experiment](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/growth_experiment.md)
-* July 8th - [DNA Extraction](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/DNA_extraction.md)
+* May 27th - [Sample Collection and Processing (Main Campus)](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Sampling_Day.md)
+* June 3rd - _Codon Conference_ - [Sample Passaging](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Sample_Passaging.md), led by Dr. Clint Page 
+* June 10th - [Dilute & Plate ](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/dilute_and_plate.md)
+* June 17th - [Streak out](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/morphotype_streaking.md)
+* June 24th - _Dr. Ward at Cellular and Molecular Fungal Biology Gordon Research Conference - Dr. LaBella leading in Kannapolis_ [Antifungal Resistance Experiment]()
+* July 1st - [DNA Extraction](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/DNA_extraction.md)
+* July 8th - [HPC Practice & Setup](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Intro_to_Cluster.md)
 * July 15th - [Genome Assembly](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Genome_Assembly.md) & Computational Time
-* July 23rd - [Growth Curve Analysis](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Growth_Curve_Analysis.md) & Continued Computational Time
+* July 23rd - Genome Annotation & Continued Computational Time
 * July 30th - Final Lab Meeting and Project Summary
 

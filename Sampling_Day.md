@@ -12,7 +12,7 @@
 
 **Where:** Main Entrance to the Bioinformatics Building on Robert D. Snyder Road (green star; [9331 Robert D. Snyder Rd](https://g.co/kgs/KCyVCYW))
 
-
+<img width="965" height="780" alt="Sampling Map" src="https://github.com/user-attachments/assets/e8a59134-edce-44ca-9966-83aa6baad5e3" />
 
 **Parking information:** There is paid parking in the CRI visitors deck (9100 Robert D. Snyder Rd, Charlotte, NC 28223)
 
@@ -28,7 +28,7 @@ Required Items:
 -	[Sample Collection Worksheet](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/2026_Wild_Yeast_Collection.pdf)
 -	100% Ethanol
 
-All of these items are in the Sampling Kit you wll get at the start of the sampling day 
+All of these items are in the Sampling Kit you will get at the start of the sampling day 
 ![image](https://github.com/user-attachments/assets/33f66d7f-8e0e-4f6f-9cae-b84faf4be247)
 
 
@@ -38,14 +38,14 @@ All of these items are in the Sampling Kit you wll get at the start of the sampl
 4.	Record sampling information on the Sample Collection Worksheet and tube/bag
 
 _Note: If you have trouble getting your GPS location see these instructions_
-[Android Instructions](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2025/blob/main/Find-coordinates-Android.pdf)
-[Apple Instructions](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2025/blob/main/Find-coordinates-iPhone.pdf)
+[Android Instructions](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Find-coordinates-Android.pdf)
+[Apple Instructions](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Find-coordinates-iPhone.pdf)
 
 ## Step 2 - Processing
 
 Processing will take place on the 4th Floor of the [Bioinformatics Building](https://g.co/kgs/KCyVCYW) in the Carter Lab. 
 
-If you get lost, please return to BINF 429 and connect with Bhuwan or Dallas 
+If you get lost, please return to BINF 429 and message Dr. Ward on Slack or connect with Bhuwan or Dallas. 
 
 Required Items:
 -	One 15mL tube per sample + 1 negative control tubes

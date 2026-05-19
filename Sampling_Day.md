@@ -8,13 +8,13 @@
 
 ## Meet-up Instructions
 
-**When:** May 28th at 9am 
+**When:** May 27th at 10am 
 
-**Where:** Main Entrance to the Botanical Gardens on Mary Alexander Road Entrance (9221 Mary Alexander Rd)
+**Where:** Main Entrance to the Bioinformatics Building on Robert D. Snyder Road (green star; [9331 Robert D. Snyder Rd](https://g.co/kgs/KCyVCYW))
 
-![image](https://github.com/user-attachments/assets/190d6262-69a6-415a-a0ae-c1dd1055048b)
 
-**Parking information:** https://gardens.charlotte.edu/visiting-the-gardens/directions-and-parking/ 
+
+**Parking information:** There is paid parking in the CRI visitors deck (9100 Robert D. Snyder Rd, Charlotte, NC 28223)
 
 
 ## Step 1 - Sample Collecting
@@ -25,7 +25,7 @@ Required Items:
 -	1 sterile bag or tube per collected sample (bring a surplus to be safe) 
 -	A sharpie/pen
 -	spoon/glove
--	[Sample Collection Worksheet](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2025/blob/main/2025_Wild_Yeast_Collection.pdf)
+-	[Sample Collection Worksheet](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/2026_Wild_Yeast_Collection.pdf)
 -	100% Ethanol
 
 All of these items are in the Sampling Kit you wll get at the start of the sampling day 
@@ -43,7 +43,7 @@ _Note: If you have trouble getting your GPS location see these instructions_
 
 ## Step 2 - Processing
 
-Processing will take place on the 4th Floor of the [Bioinformatics Building](https://g.co/kgs/KCyVCYW) in the Carter Lab 
+Processing will take place on the 4th Floor of the [Bioinformatics Building](https://g.co/kgs/KCyVCYW) in the Carter Lab. 
 
 If you get lost, please return to BINF 429 and connect with Bhuwan or Dallas 
 

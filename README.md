@@ -38,6 +38,8 @@ Yeasts are typically defined as single cellular fungi. Across the fungal subphyl
 
 ## More resources 
 
+You can also find the LaBella lab publications here: https://www.lablabella.com/portfolio-collections/publications 
+
 In our gooogle drive please read the "Who are the yeasts" PDF to learn more about who the yeasts are and why they are so cool. 
 
 There is also a folder of papers you can take a look at!

@@ -35,7 +35,18 @@ This project will expand our genomic dataset to include yeasts sampled in the ur
 
 Yeasts are typically defined as single cellular fungi. Across the fungal subphylum, however, there have been multiple transitions to and from single-celled fungi. Therefore, the "yeasts" do not form a single group. When we use the word "yeast" we are referring specifically to the yeast of the Saccharomycotina subphylum. 
 
+
+## More resources 
+
 In our gooogle drive please read the "Who are the yeasts" PDF to learn more about who the yeasts are and why they are so cool. 
+
+There is also a folder of papers you can take a look at!
+
+Here are some talks to listen to:
+- I am a big fan of this talk on yeast in carnivorous plants: https://www.youtube.com/watch?v=MVE0BX8YEB8 
+- A feast with yeast: _Saccharomyces_ as a model system for population genetics https://www.youtube.com/watch?v=KWNY60o47qU 
+- Genomic Insights into Yeast Diversity and Evolution: https://www.youtube.com/watch?v=UlUX3Z6xoRQ
+
 
 &nbsp;
 &nbsp;

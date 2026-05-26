@@ -45,7 +45,7 @@ _Note: If you have trouble getting your GPS location see these instructions_
 
 Processing will take place on the 4th Floor of the [Bioinformatics Building](https://g.co/kgs/KCyVCYW) in the Carter Lab. 
 
-If you get lost, please return to BINF 429 and message Dr. Ward on Slack or connect with Bhuwan or Dallas. 
+If you get lost, please return to BINF 422 and message Dr. Ward on Slack or connect with Bhuwan or Dallas. 
 
 Required Items:
 -	One 15mL tube per sample + 1 negative control tubes

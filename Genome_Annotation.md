@@ -118,7 +118,7 @@ Funannotate calls a program called genemark. We need to tell genemark where to l
 #go to your home directory
 cd
 #enter this command exactly
-cp /projects/class/binf3101_001/.gm_key $HOME/.gm_key
+cp /projects/labella_lab/wild_yeast/.gm_key $HOME/.gm_key
 ```
 &nbsp;
 
@@ -131,20 +131,23 @@ To copy the slurm script to your current directory use
 ```bash
 #go back into lab 4
 cd annotation
-cp /projects/class/binf3101_001/annotation/funannotate.slurm .
+cp /projects/labella_lab/wild_yeast/funannotate.slurm .
 ```
 
 Below is what is in the funannotate.slurm script. If you use `cat funannotate.slurm` you will see the following commands. _You do not need to run these commands_
 
 ```
+module purge
+module load genemark
+module load anaconda3
+conda activate funannotate
+export FUNANNOTATE_DB=/projects/labella_lab/funannotate_db
 export GENEMARK_PATH="/apps/pkg/anaconda3/apps/genemark-4.72/gmes_linux_64/"
 
-module load funannotate
-
-funannotate predict -i GENOMENAMEX.masked.fa --species "GENOMENAMEX" -o GENOMENAMEX --cpus 4
+funannotate predict -i INPUT -o annotation -s "NAME" --cpus 4
 ```
 
-You will need to edit the file to replace GENOMENAMEX with your number
+You will need to edit the file to replace INPUT and NAME with your input file and genome name
 
 &nbsp;
 

@@ -193,7 +193,8 @@ This file is in a special machine-readable format called `JSON`. But you can vie
 
 &nbsp;
 
-# LQ 4
+# REPORT
+
 Report the following statistics for your genome annotation
 - Number of protein-coding genes
 - Number of tRNA genes
@@ -213,12 +214,9 @@ Copy this using the command below
 
 ```bash
 
-cp GENOMENAMEX.cds-transcripts.fa /projects/class/binf3101_001/genome_annotations/.
+cp GENOMENAMEX.cds-transcripts.fa /projects/labella_lab/wild_yeast/
 
 ```
 
 
-
-# LQ 5
-Confirm you copied your file over
 

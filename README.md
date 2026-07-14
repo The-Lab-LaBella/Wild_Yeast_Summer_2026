@@ -100,7 +100,7 @@ The LaBella lab will conduct wet lab work at the NCRC on Wednesdays.
 * June 24th - _Dr. Ward at Cellular and Molecular Fungal Biology Gordon Research Conference - Dr. LaBella leading in Kannapolis_ [Antifungal Resistance Experiment]()
 * July 1st - [DNA Extraction](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/DNA_extraction.md)
 * July 8th - [HPC Practice & Setup](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Intro_to_Cluster.md)
-* July 15th - [Genome Assembly](https://github.com/The-Lab-LaBella/Wild_Yeast_Summer_2026/blob/main/Genome_Assembly.md) & Computational Time
+* July 15th - Genome Analysis & Annotation
 * July 23rd - Genome Annotation & Continued Computational Time
 * July 30th - Final Lab Meeting and Project Summary
 

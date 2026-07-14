@@ -183,51 +183,9 @@ You will examine several of the files from our output to answer the questions be
 
 &nbsp;
 
-### Step 4a - BUSCO results
-
-One of the major questions we want to know is, how well did our annotation method do in finding genes? 
-
-One way we can ask that question is to look to see if we find genes we expect to find in every organism. 
-
-One way of doing this is by looking at BUSCO or Benchmarking Universal Single Copy Orthologs.
 
 
-BUSCO genes have the following properties
-
-- **Single-Copy**: BUSCO genes are present as one copy in the genome, and expected to be the same in most species within a taxonomic group. 
-- **Orthologs**: Genes that share a common ancestral gene in different species. 
-- **Conserved across taxa**: The selection of single-copy orthologs used in BUSCO datasets are highly conserved across a wide range of species. 
-
-Running a BUSCO analysis will tell us about the number of BUSCO genes that are
-- **Complete** - found in the genome assembly
-- **Duplicated** - found in more than one copy in the genome
-- **Framented** - only part of the gene was found
-- **Missing** - the gene is absent due to technical or biological resons.
-
-To find the BUSCO results you will need to navigate to the file `short_summary_GENOMENAME.txt` 
-
-The path to this file is `predict_misc/busco/runGENOMENAMEX/1111111/short_summary_srrXXXXX.txt`
-You will need to replace the `XXXXX` with your SRR number and the `1111111` will be a random set of numbers
-
-&nbsp;
-# LQ 3
-## LQ 3a
-
-What percent of the BUSCO genes are complete? 
-
-## LQ 3b 
-
-We are comparing our yeast genome to all of Dikarya (a subkingdom of Fungi). Therefore, we would expect a great genome annotation to have a BUSCO completeness score of >90%. Anything above 75% is acceptable.
-
-How well was your genome annotated if we assume all the missing BUSCOs are missing because of technical issues?
-- Very well annotated
-- Adequately annotated
-- Poorly annotated
-
-&nbsp;
-&nbsp;
-
-### Step 4b - Analyze annotation results
+### Step 4a - Analyze annotation results
 
 We will now look at a file called `GENOMENAMEX.stats.json` in the `predict_results` folder. 
 

@@ -47,6 +47,9 @@ Now we want to copy our genome into the annotation folder
 cp /projects/labella_lab/wildyeast/GENOMENAME annotation/.
 ```
 
+NOTE: If you are practicing, you can copy a genome from `/projects/labella_lab/wildyeast/assemblies/` 
+To see a list of the possible genomes, use `ls /projects/labella_lab/wildyeast/assemblies/`
+
 As a reminder the ```.``` command means "here". So ```annotation/.``` means "here in the annotation folder. 
 
 

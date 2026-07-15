@@ -143,7 +143,7 @@ Below is what is in the funannotate.slurm script. If you use `cat funannotate.sl
 module purge
 module load genemark
 module load anaconda3
-conda activate funannotate
+module load funannotate
 export FUNANNOTATE_DB=/projects/labella_lab/funannotate_db
 export GENEMARK_PATH="/apps/pkg/anaconda3/apps/genemark-4.72/gmes_linux_64/"
 
